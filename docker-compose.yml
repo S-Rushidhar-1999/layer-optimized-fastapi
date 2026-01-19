@@ -1,0 +1,18 @@
+services:
+  mongo:
+    image: mongo:6
+    container_name: layer_optimized_mongo
+    ports:
+      - "27017:27017"
+    restart: always
+
+  analytics:
+    build:
+      context: ./analytics_service
+      dockerfile: Dockerfile
+    container_name: layer_optimized_analytics
+    ports:
+      - "9000:9000"
+    depends_on:
+      - mongo
+    restart: always
