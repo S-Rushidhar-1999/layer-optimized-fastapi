@@ -5,6 +5,23 @@ This project demonstrates how **Docker layer optimization and multi-stage builds
 It also includes a **CI build-time analytics microservice** that stores and visualizes build metrics using MongoDB and FastAPI.
 
 
+docker-compose down
+
+docker system prune -af
+docker builder prune -af
+
+docker ps -a
+docker images
+
+docker-compose up --build
+
+and in gitbash
+
+cd service_app
+bash ../ci-build.sh
+
+docker-compose down at the end
+
 
 ## 🚀 Key Features
 
